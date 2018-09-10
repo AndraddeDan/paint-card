@@ -1,0 +1,65 @@
+body{
+  padding-top: 20px;
+  background-color: white;
+}
+
+button{
+  height: 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+canvas{
+/*  background-color: lightyellow;*/
+  background-color: gray;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+
+  box-shadow: 7px 7px 3px #bbbbbb;
+  -webkit-box-shadow: 7px 7px 3px #bbbbbb;
+  -moz-box-shadow: 7px 7px 3px #bbbbbb;
+}
+
+.header{
+  height: 90px;
+}
+
+.title{
+  font-size: 3em;
+  font-family: 'Waiting for the Sunrise';
+}
+
+.background-color{
+  background-color: lightblue;
+  height: 400px;
+}
+
+.colors{
+  background-color: lightcoral;
+  height: 400px;
+}
+
+#save{
+  font-family: 'Saira Condensed';
+}
+
+#cor{
+/*  margin-top: 10px;*/
+  width: 90px;
+  height: 40px;
+  margin: 0px 10px;
+}
+
+#size{
+  width: 70px;
+  height: 40px;
+}
+
+.shape-color{
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  margin: 9px;
+}
