@@ -68,11 +68,11 @@ canvas{
 }
 
 .tape-top{
-  transform: translate(-70px,-470px) scale(0.8);
+  transform: translate(-90px,-490px) scale(0.5);
 }
 
 .tape-bottom{
-  transform: translate(480px,-140px) rotate(180deg) scale(0.8);
+  transform: translate(490px,-120px) rotate(180deg) scale(0.5);
 }
 
 /* PALETA DE CORES */
