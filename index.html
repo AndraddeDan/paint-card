@@ -1,13 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Paint Card</title>
-        <link rel="stylesheet" href="assets/main.css" type="text/css" charset="utf-8">
-    </head>
-    <body>
-        <canvas width="1000" height="800"></canvas>
-        <script src="assets/main.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>Paint Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" charset="utf-8">
+  </head>
+  <body>
+
+    <!-- CABEÇALHO -->
+
+    <div class="container header">
+      <div class="row">
+        <div class="col-8 title"><center>Paint Card</center></div>
+          <div class="col-3 offset-md-1 logo">
+            <center> <a href="https://www.minutododan.com.br"><img src="assets/imgs/logo.svg" alt="Daniel Andrade - Front End" width="50%"></a> </center>
+          </div>
+      </div>
+    </div>
+
+    <!-- CANVAS PARA DESENHO -->
+
+    <div class="container content">
+      <div class="row">
+        <div class="col-12 col-md-7 offset-lg-1">
+          <canvas width="600" height="400"></canvas>
+          <div class="tape-top"></div>
+          <div class="tape-bottom"></div>
+        </div>
+
+        <!-- PALETAS DE CORES -->
+
+        <div class="col-1 background-color">
+          <div class="shape-background-color"></div>
+          <div class="shape-background-color"></div>
+          <div class="shape-background-color"></div>
+        </div>
+        <div class="col-2 colors">
+          <div class="row">
+            <div class="col-3">
+              <div class="shape-color color1"></div>
+              <div class="shape-color color2"></div>
+              <div class="shape-color color3"></div>
+              <div class="shape-color color4"></div>
+              <div class="shape-color color5"></div>
+              <div class="shape-color color6"></div>
+            </div>
+
+            <div class="col-2">
+              <div class="shape-color color7"></div>
+              <div class="shape-color color8"></div>
+              <div class="shape-color color9"></div>
+              <div class="shape-color color10"></div>
+              <div class="shape-color color11"></div>
+              <div class="shape-color color12"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="cor" class="text"><span class="btn select">SELECT COLOR:</span></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input class="form-control" id="cor" name="cor" type="color">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU DE BOTÕES -->
+
+    <div class="container footer">
+      <div class="row">
+        <div class="col-11 offset-lg-1"><br>
+          <button class="btn" id="save">HOW TO SAVE?</button>
+          <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
+          <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
+          <button class="btn" id="rectangle"> <img src="assets/icons/rectangle.svg" alt="rectangle"> </button>
+          <button class="btn" id="circle"> <img src="assets/icons/circle.svg" alt="circle"> </button>
+          <button class="btn" id="triangle"> <img src="assets/icons/triangle.svg" alt="triangle"> </button>
+          <input class="form-control" id="size" type="number" value="14">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="assets/js/namefile.js"></script>
+  </body>
 </html>
