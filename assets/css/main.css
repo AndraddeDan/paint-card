@@ -1,44 +1,146 @@
 body{
   padding-top: 20px;
-  background-color: white;
+  background-image: url(../imgs/background.jpg);
+  background-size: 100%;
 }
 
-button{
-  height: 40px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+.text{
+  color: #ffffff;
+  font-family: 'Saira Condensed';
 }
 
-canvas{
-/*  background-color: lightyellow;*/
-  background-color: gray;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-
-  box-shadow: 7px 7px 3px #bbbbbb;
-  -webkit-box-shadow: 7px 7px 3px #bbbbbb;
-  -moz-box-shadow: 7px 7px 3px #bbbbbb;
-}
+/* HEADER DA PÁGINA */
 
 .header{
   height: 90px;
 }
 
 .title{
+  color: #fff;
   font-size: 3em;
   font-family: 'Waiting for the Sunrise';
 }
 
-.background-color{
-  background-color: lightblue;
-  height: 400px;
+.logo-dan{
+  background-image: url("../imgs/logo.svg");
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
-.colors{
-  background-color: lightcoral;
-  height: 400px;
+/* ÁREA ÚTIL PARA DESENHAR */
+
+canvas{
+  background-color: #ffff99;
+  position: relative;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+
+  box-shadow: 7px 7px 3px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 7px 7px 3px rgba(0,0,0,0.7);
+  -moz-box-shadow: 7px 7px 3px rgba(0,0,0,0.7);
+}
+
+.tape-top, .tape-bottom{
+  width: 200px;
+  height: 200px;
+  background-image: url("../imgs/tape.svg");
+  background-size: 100%;
+  position: absolute;
+}
+
+.tape-top{
+  transform: translate(-70px,-470px) scale(0.8);
+}
+
+.tape-bottom{
+  transform: translate(480px,-140px) rotate(180deg) scale(0.8);
+}
+
+/* PALETA DE CORES */
+
+.shape-color, .shape-background-color{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.shape-color{
+  transform: scale(1.2);
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.shape-background-color{
+  margin-bottom: 10px;
+}
+
+/* CORES DE FUNDO */
+
+.background-color > div:nth-child(1){
+  background-color: black;
+}
+
+.background-color > div:nth-child(2){
+  background-color: white;
+}
+
+.background-color > div:nth-child(3){
+  background-color: #ffff99;
+}
+
+/* CORES DO PINCÉL */
+
+.color1{  background-color: #ff0000; }
+.color2{  background-color: #ffff00; }
+.color3{  background-color: #00ffff; }
+.color4{  background-color: #4a86e8; }
+.color5{  background-color: #9900ff; }
+.color6{  background-color: #000000; }
+.color7{  background-color: #ff9900; }
+.color8{  background-color: #00ff00; }
+.color9{  background-color: #009688; }
+.color10{ background-color: #0000ff; }
+.color11{ background-color: #ff00ff; }
+.color12{ background-color: #ffffff; }
+
+/* RODAPÉ COM BOTÕES */
+
+button{
+  height: 40px;
+  margin-right: 5px;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.select{
+  margin-top: -50px;
+  margin-bottom: 0px !important;
+
+  height: 40px;
+  margin-right: 5px;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+input{
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 
 #save{
@@ -46,20 +148,14 @@ canvas{
 }
 
 #cor{
-/*  margin-top: 10px;*/
-  width: 90px;
+  width: 105px;
   height: 40px;
-  margin: 0px 10px;
+  display: none;
 }
 
 #size{
   width: 70px;
   height: 40px;
+  display: inline !important;
 }
 
-.shape-color{
-  background-color: #000;
-  width: 30px;
-  height: 30px;
-  margin: 9px;
-}
