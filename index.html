@@ -12,54 +12,67 @@
   </head>
   <body>
     <div class="container header">
-      <center>
-        <div class="row">
-          <div class="col-8 title">Paint Card</div>
-          <div class="col-4 logo-dan"></div>
-        </div>
-      </center>
+      <div class="row">
+        <div class="col-8 title"><center>Paint Card</center></div>
+        <div class="col-3 offset-md-1 logo-dan"></div>
+      </div>
     </div>
     <div class="container content">
       <div class="row">
-        <div class="col-7">
-            <canvas width="600" height="400"></canvas>
+        <div class="col-7 offset-md-1">
+          <canvas width="600" height="400"></canvas>
+          <div class="tape-top"></div>
+          <div class="tape-bottom"></div>
         </div>
         <div class="col-1 background-color">
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
+          <div class="shape-background-color"></div>
+          <div class="shape-background-color"></div>
+          <div class="shape-background-color"></div>
         </div>
-        <div class="col-2 colors">
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-        </div>
-        <div class="col-2 colors">
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
-          <div class="shape-color"></div>
+        <div class="col-2">
+          <div class="row">
+            <div class="col-3">
+              <div class="shape-color color1"></div>
+              <div class="shape-color color2"></div>
+              <div class="shape-color color3"></div>
+              <div class="shape-color color4"></div>
+              <div class="shape-color color5"></div>
+              <div class="shape-color color6"></div>
+            </div>
+
+            <div class="col-2">
+              <div class="shape-color color7"></div>
+              <div class="shape-color color8"></div>
+              <div class="shape-color color9"></div>
+              <div class="shape-color color10"></div>
+              <div class="shape-color color11"></div>
+              <div class="shape-color color12"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div><br>
+    </div>
     <div class="container footer">
       <div class="row">
-        <div class="col-7">
-            <button id="save">SALVAR</button>
-            <button>erase</button>
-            <button>rectangle</button>
-            <button>circle</button>
-            <button>triangle</button>
+        <div class="col-7 offset-md-1"><br>
+          <button class="btn" id="save">HOW TO SAVE?</button>
+          <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
+          <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
+          <button class="btn" id="rectangle"> <img src="assets/icons/rectangle.svg" alt="rectangle"> </button>
+          <button class="btn" id="circle"> <img src="assets/icons/circle.svg" alt="circle"> </button>
+          <button class="btn" id="triangle"> <img src="assets/icons/triangle.svg" alt="triangle"> </button>
+          <input class="form-control" id="size" type="number" value="14">
         </div>
-        <div class="col-5">
+        <div class="col-3 offset-md-1">
           <div class="row">
-            <input id="size" type="number">
-            <input id="cor" type="color">
+            <div class="col-12">
+              <label for="cor" class="text"><span class="btn select">SELECT COLOR:</span></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input class="form-control" id="cor" name="cor" type="color">
+            </div>
           </div>
         </div>
       </div>
