@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
     <title>Paint Card</title>
     <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
@@ -11,25 +11,36 @@
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" charset="utf-8">
   </head>
   <body>
+
+    <!-- CABEÇALHO -->
+
     <div class="container header">
       <div class="row">
         <div class="col-8 title"><center>Paint Card</center></div>
-        <div class="col-3 offset-md-1 logo-dan"></div>
+          <div class="col-3 offset-md-1 logo">
+            <center> <a href="https://www.minutododan.com.br"><img src="assets/imgs/logo.svg" alt="Daniel Andrade - Front End" width="50%"></a> </center>
+          </div>
       </div>
     </div>
+
+    <!-- CANVAS PARA DESENHO -->
+
     <div class="container content">
       <div class="row">
-        <div class="col-7 offset-md-1">
+        <div class="col-12 col-md-7 offset-lg-1">
           <canvas width="600" height="400"></canvas>
           <div class="tape-top"></div>
           <div class="tape-bottom"></div>
         </div>
+
+        <!-- PALETAS DE CORES -->
+
         <div class="col-1 background-color">
           <div class="shape-background-color"></div>
           <div class="shape-background-color"></div>
           <div class="shape-background-color"></div>
         </div>
-        <div class="col-2">
+        <div class="col-2 colors">
           <div class="row">
             <div class="col-3">
               <div class="shape-color color1"></div>
@@ -49,21 +60,6 @@
               <div class="shape-color color12"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container footer">
-      <div class="row">
-        <div class="col-7 offset-md-1"><br>
-          <button class="btn" id="save">HOW TO SAVE?</button>
-          <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
-          <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
-          <button class="btn" id="rectangle"> <img src="assets/icons/rectangle.svg" alt="rectangle"> </button>
-          <button class="btn" id="circle"> <img src="assets/icons/circle.svg" alt="circle"> </button>
-          <button class="btn" id="triangle"> <img src="assets/icons/triangle.svg" alt="triangle"> </button>
-          <input class="form-control" id="size" type="number" value="14">
-        </div>
-        <div class="col-3 offset-md-1">
           <div class="row">
             <div class="col-12">
               <label for="cor" class="text"><span class="btn select">SELECT COLOR:</span></label>
@@ -74,6 +70,22 @@
               <input class="form-control" id="cor" name="cor" type="color">
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU DE BOTÕES -->
+
+    <div class="container footer">
+      <div class="row">
+        <div class="col-11 offset-lg-1"><br>
+          <button class="btn" id="save">HOW TO SAVE?</button>
+          <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
+          <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
+          <button class="btn" id="rectangle"> <img src="assets/icons/rectangle.svg" alt="rectangle"> </button>
+          <button class="btn" id="circle"> <img src="assets/icons/circle.svg" alt="circle"> </button>
+          <button class="btn" id="triangle"> <img src="assets/icons/triangle.svg" alt="triangle"> </button>
+          <input class="form-control" id="size" type="number" value="14">
         </div>
       </div>
     </div>

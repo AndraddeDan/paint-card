@@ -1,7 +1,13 @@
+@media(max-width:1093px){
+  .background-color, .colors{
+    display: none;
+  }
+}
+
 body{
   padding-top: 20px;
   background-image: url(../imgs/background.jpg);
-  background-size: 100%;
+  padding-bottom: 20px;
 }
 
 .text{
@@ -21,10 +27,8 @@ body{
   font-family: 'Waiting for the Sunrise';
 }
 
-.logo-dan{
-  background-image: url("../imgs/logo.svg");
-  background-size: 40%;
-  background-repeat: no-repeat;
+.logo{
+  margin-left: 10px;
 }
 
 /* ÁREA ÚTIL PARA DESENHAR */
@@ -123,7 +127,7 @@ button{
 }
 
 .select{
-  margin-top: -50px;
+  /* margin-top: -50px; */
   margin-bottom: 0px !important;
 
   height: 40px;
