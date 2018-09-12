@@ -1,7 +1,23 @@
-@media(max-width:1093px){
-  .background-color, .colors{
+@media(max-width:1150px){
+  body{
+    padding-left: 0px;
+  }
+  .background-color{
     display: none;
   }
+  .colors{
+    margin-left: 100px;
+  }
+}
+
+@media(max-width:990px){
+  .colors{
+    display: none;
+  }
+}
+
+@media(min-width:1151px){
+  body{ padding-left: 100px; }
 }
 
 body{
@@ -25,10 +41,7 @@ body{
   color: #fff;
   font-size: 3em;
   font-family: 'Waiting for the Sunrise';
-}
-
-.logo{
-  margin-left: 10px;
+  padding-left: 200px;
 }
 
 /* ÁREA ÚTIL PARA DESENHAR */
@@ -162,4 +175,3 @@ input{
   height: 40px;
   display: inline !important;
 }
-
