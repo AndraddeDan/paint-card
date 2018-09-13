@@ -3,6 +3,10 @@ var brush = canvas.getContext('2d');
 
 var canvasPosition = canvas.getBoundingClientRect();
 
+// Cores experimentais //
+brush.fillStyle = '#ffff99';
+brush.fillRect(0, 0, 600, 400);
+
 function brushSize() {
   var size = document.querySelector('#size').value;
   return size;
@@ -13,11 +17,4 @@ function brushColor() {
   return color;
 }
 
-function canvasColor() {
-  color = document.querySelector('canvas').value;
-  return color;
-}
-
-// BOTÃO DE SELECT COM A COR SELECIONADA
-var select = document.querySelector('.select');
-select.style.backgroundColor = brushColor();
+// function canvasColor() { color = document.querySelector('canvas').style.backgroundColor; return color; }
