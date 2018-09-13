@@ -1,3 +1,5 @@
+// FORMATOS PERMITIDOS //
+
 function rectangle(x, y, size, color) {
   brush.fillStyle = color;
   brush.fillRect(x, y, size, size);
@@ -18,3 +20,21 @@ function triangle(x, y, size, color) {
   brush.lineTo(x + size / 2, y + size / 2);
   brush.fill();
 }
+
+// TROCANDO O FORMATO DO PINCEL //
+
+function switchShape(event){
+  clicked = event.target;
+  shape = clicked.value;
+  // console.log(shape);
+}
+
+var shape = 'circleFormat';
+
+var circleButton = document.querySelector('#circle');
+var rectangleButton = document.querySelector('#rectangle');
+var triangleButton = document.querySelector('#triangle');
+
+circleButton.addEventListener('click', switchShape);
+rectangleButton.addEventListener('click', switchShape);
+triangleButton.addEventListener('click', switchShape);
