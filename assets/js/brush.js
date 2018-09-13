@@ -1,32 +1,42 @@
-var canvas = document.querySelector("canvas");
-var brush = canvas.getContext("2d");
+var canvas = document.querySelector('canvas');
+var brush = canvas.getContext('2d');
 
 var canvasPosition = canvas.getBoundingClientRect();
 
-console.log(canvasPosition);
-// console.log(canvas.offsetLeft);
+function brushSize() {
+  var size = document.querySelector('#size').value;
+  return size;
+}
 
-var draw = false;
-
-brushSize = document.querySelector("#size").value;
-brushColor = document.querySelector("#cor").value;
+function brushColor() {
+  color = document.querySelector('#cor').value;
+  return color;
+}
 
 // BOTÃO DE SELECT COM A COR SELECIONADA
-var select = document.querySelector(".select");
-select.style.backgroundColor = brushColor;
+var select = document.querySelector('.select');
 
-function mousePosition(event){
+var select = document.querySelector('.select'); 
+document.body.addEventListener('onmousemove', function(){
+  this.style.backgroundColor = brushColor();
+});
+
+select.style.backgroundColor = brushColor();
+
+function mousePosition(event) {
   var x = event.pageX;
   var y = event.pageY;
 
   console.log(x, y);
 }
 
-function canDraw(){
+var draw = false;
+
+function canDraw() {
   draw = true;
 }
 
-function cantDraw(){
+function cantDraw() {
   draw = false;
 }
 
