@@ -142,10 +142,10 @@ button{
 .select{
   /* margin-top: -50px; */
   margin-bottom: 0px !important;
+  margin-left: -10px;
 
   height: 40px;
-  margin-right: 5px;
-  border: solid 1px transparent;
+
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
