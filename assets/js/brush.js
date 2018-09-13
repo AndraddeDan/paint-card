@@ -1,33 +1,10 @@
-var canvas = document.querySelector('canvas');
-var brush = canvas.getContext('2d');
+function drawing(event) {
+  var x = event.pageX - canvasPosition.x - 8;
+  var y = event.pageY - canvasPosition.y - 8;
 
-var canvasPosition = canvas.getBoundingClientRect();
-
-function brushSize() {
-  var size = document.querySelector('#size').value;
-  return size;
-}
-
-function brushColor() {
-  color = document.querySelector('#cor').value;
-  return color;
-}
-
-// BOTÃO DE SELECT COM A COR SELECIONADA
-var select = document.querySelector('.select');
-
-var select = document.querySelector('.select'); 
-document.body.addEventListener('onmousemove', function(){
-  this.style.backgroundColor = brushColor();
-});
-
-select.style.backgroundColor = brushColor();
-
-function mousePosition(event) {
-  var x = event.pageX;
-  var y = event.pageY;
-
-  console.log(x, y);
+  // rectangle(x, y, brushSize(), brushColor());
+  // circle(x, y, brushSize(), brushColor());
+  // triangle(x, y, brushSize(), brushColor());
 }
 
 var draw = false;
@@ -40,4 +17,4 @@ function cantDraw() {
   draw = false;
 }
 
-// canvas.onmousemove = mousePosition;
+canvas.onmousemove = drawing;
