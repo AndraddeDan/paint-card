@@ -1,41 +1,65 @@
-// FORMATOS PERMITIDOS //
+/*
+ * Modo de cores alternadas
+ * entre personalizada(custom)
+ * e cores da paleta(shape)
+ * tendo como padrao o 'custom'
+ */
 
-function rectangle(x, y, size, color) {
-  brush.fillStyle = color;
-  brush.fillRect(x, y, size, size);
+var colorMode = 'custom';
+
+/*
+ * A funcao a seguir troca para
+ * o modo custom quando o seletor
+ * de cores for clicado.
+ */
+
+var selectColor = document.querySelector('.select');
+selectColor.addEventListener('click', function(){
+  colorMode = 'custom';
+});
+
+
+// Cor padrao no modo shape //
+var colorShape = 'rgb(0,0,0)';
+
+/*
+ * A funcao a seguir troca para
+ * o modo shape quando alguma cor
+ * na paleta de cores for clicada.
+ */
+
+var shapeColor = document.querySelector('.colors');
+shapeColor.addEventListener('click', readyColor);
+
+function readyColor(event){
+  clickedObject = event.target;
+  var style = getComputedStyle(clickedObject);
+  var currentColor = style.backgroundColor;
+  console.log(currentColor);
+
+  var select = document.querySelector('.select');
+  select.style.backgroundColor = currentColor;
+  colorMode = 'shape';
+  colorShape = currentColor;
+  
+};
+
+/*
+ * A funcao a seguir depende
+ * do modo de cor escolhido
+ * pelo usuario para devolver
+ * a cor que o pincel devera
+ * operar
+ */
+
+function brushColor() {
+  if(colorMode == 'custom'){
+    var color = document.querySelector('#cor').value;
+    return color;
+  }
+  if(colorMode == 'shape'){
+    var color = colorShape;
+    return color;
+  }
 }
 
-function circle(x, y, size, color) {
-  brush.fillStyle = color;
-  brush.beginPath();
-  brush.arc(x, y, size / 1.7, 0, 2 * Math.PI);
-  brush.fill();
-}
-
-function triangle(x, y, size, color) {
-  brush.fillStyle = color;
-  brush.beginPath();
-  brush.moveTo(x, y - size / 2);
-  brush.lineTo(x - size / 2, y + size / 2);
-  brush.lineTo(x + size / 2, y + size / 2);
-  brush.fill();
-}
-
-// TROCANDO O FORMATO DO PINCEL //
-
-function switchShape(event){
-  clicked = event.currentTarget;
-  shape = clicked.value;
-  // console.log(shape);
-}
-
-// FORMATO PADRAO //
-var shape = 'circleFormat';
-
-var circleButton = document.querySelector('#circle');
-var rectangleButton = document.querySelector('#rectangle');
-var triangleButton = document.querySelector('#triangle');
-
-circleButton.addEventListener('click', switchShape);
-rectangleButton.addEventListener('click', switchShape);
-triangleButton.addEventListener('click', switchShape);

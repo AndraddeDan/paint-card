@@ -1,14 +1,32 @@
+// RETORNA O TAMANHO DO PINCEL //
+
+function brushSize() {
+  var size = document.querySelector('#size').value;
+  return size;
+}
+
+/*
+ * O pincel opera em dois modos,
+ * no modo brush e no modo erase
+ */
+
 var drawingMode = 'brush';
 
 function toErase(){
   drawingMode = 'erase';
-  // console.log(drawingMode);
 }
 
 function toBrush(){
   drawingMode = 'brush';
-  // console.log(drawingMode);
 }
+
+var eraseButton = document.querySelector('#erase');
+eraseButton.addEventListener('click', toErase);
+
+var brushButton = document.querySelector('#brush');
+brushButton.addEventListener('click', toBrush);
+
+// LIDA COM O MOVIMENTO, OS MODOS E A FORMA //
 
 function drawing(event) {
 
@@ -45,6 +63,8 @@ function drawing(event) {
   }
 }
 
+// LIDA COM A POSSIBILIDADE DE PODER OU NAO MARCAR A TELA //
+
 var draw = false;
 
 function canDraw() {
@@ -58,9 +78,3 @@ function cantDraw() {
 canvas.onmousemove = drawing;
 canvas.onmousedown = canDraw;
 canvas.onmouseup = cantDraw;
-
-var eraseButton = document.querySelector('#erase');
-eraseButton.addEventListener('click', toErase);
-
-var brushButton = document.querySelector('#brush');
-brushButton.addEventListener('click', toBrush);
