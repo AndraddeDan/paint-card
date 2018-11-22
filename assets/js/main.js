@@ -4,7 +4,8 @@ var brush = canvas.getContext('2d');
 var canvasPosition = canvas.getBoundingClientRect();
 
 // Cores experimentais //
-brush.fillStyle = '#ffff99';
+var paperColor = '#ffff99'
+brush.fillStyle = paperColor;
 brush.fillRect(0, 0, 600, 400);
 
 function brushSize() {
@@ -13,7 +14,7 @@ function brushSize() {
 }
 
 function brushColor() {
-  color = document.querySelector('#cor').value;
+  var color = document.querySelector('#cor').value;
   return color;
 }
 
