@@ -35,7 +35,7 @@ function readyColor(event){
   clickedObject = event.target;
   var style = getComputedStyle(clickedObject);
   var currentColor = style.backgroundColor;
-  console.log(currentColor);
+  //console.log(currentColor);
 
   var select = document.querySelector('.select');
   select.style.backgroundColor = currentColor;

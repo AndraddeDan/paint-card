@@ -2,7 +2,7 @@
   body{
     padding-left: 0px;
   }
-  .background-color{
+  .background-color, #reset{
     display: none;
   }
   .colors{
@@ -94,6 +94,25 @@ canvas{
 
 .shape-background-color{
   margin-bottom: 10px;
+}
+
+/* BOTAO DE RESET */
+#reset{
+  background-color: #f00;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 5px;
+  margin-left: -7px;
+  cursor: pointer;
+  font-family: 'Saira Condensed';
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+
+  box-shadow: 3px 3px 2px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 3px 3px 2px rgba(0,0,0,0.7);
+  -moz-box-shadow: 3px 3px 2px rgba(0,0,0,0.7);
 }
 
 /* CORES DE FUNDO */

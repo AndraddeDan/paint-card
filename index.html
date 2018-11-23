@@ -30,14 +30,45 @@
           <div class="tape-bottom"></div>
         </div>
 
-        <!-- PALETAS DE CORES -->
-
-        <div class="col-1 background-color">
-          <div class="shape-background-color"></div>
-          <div class="shape-background-color"></div>
-          <div class="shape-background-color"></div>
+        <!-- BOTOES DE COR DO PAPEL -->
+        <div class="col-1">
+          <span class="background-color">
+            <div class="shape-background-color" data-toggle="modal" data-target="#paper"></div>
+            <div class="shape-background-color" data-toggle="modal" data-target="#paper"></div>
+            <div class="shape-background-color" data-toggle="modal" data-target="#paper"></div>
+          </span>
+          <br>
+          <span id="reset"><b>RESET</b></span>
         </div>
 
+        <!-- MODAL DE COR DO PAPEL -->
+        <div class="modal fade" id="paper" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <small>English:</small><br>
+                To change the color of the paper you will have to erase your current art. Are you sure you want to lose your job?<br><br> 
+                (Make sure you have saved your artwork before proceeding by clicking "Delete") <br><hr>
+                <small>Português:</small><br>
+                Para trocar a cor do papel você terá que apagar sua arte atual. Você tem certeza que deseja perder seu trabalho?<br><br>
+                (Certifique-se de ter salvo sua arte antes de prosseguir clicando em "Delete")
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Keep Art</button>
+                <button type="button" class="btn btn-warning" id="newArt" data-dismiss="modal">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FIM MODAL -->
+
+        <!-- PALETA DE CORES -->
         <div class="col-lg-2">
           <div class="row colors">
             <div class="col-4">
@@ -72,12 +103,37 @@
       </div>
     </div>
 
-    <!-- MENU DE BOTÕES -->
+    <!-- MENU DE BOTOES -->
 
     <div class="container footer">
       <div class="row">
         <div class="col-11"><br>
-          <button class="btn" id="save">HOW TO SAVE?</button>
+          <button type="button" class="btn" id="save" data-toggle="modal" data-target="#howSave">HOW TO SAVE?</button>
+
+          <!-- MODAL DE SAVE -->
+          <div class="modal fade" id="howSave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Saving your art</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <small>English:</small><br>
+                  - Click on the image with the right button of mouse and choose the option "Save Picture As ..." <br><hr>
+                  <small>Português:</small><br>
+                  - Clique na imagem com o botão direito do mouse e escolha a opção "Salvar imagem como ..."
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIM MODAL -->
+
           <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
           <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
           <button class="btn" id="circle" value="circleFormat"> <img src="assets/icons/circle.svg" alt="circle"> </button>
