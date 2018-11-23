@@ -77,7 +77,32 @@
     <div class="container footer">
       <div class="row">
         <div class="col-11"><br>
-          <button class="btn" id="save">HOW TO SAVE?</button>
+          <button type="button" class="btn" id="save" data-toggle="modal" data-target="#howSave">HOW TO SAVE?</button>
+
+          <!-- MODAL DE SAVE -->
+          <div class="modal fade" id="howSave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Saving your art</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <small>English:</small><br>
+                  - Click on the image with the right button of mouse and choose the option "Save Picture As ..." <br><hr>
+                  <small>Português:</small><br>
+                  - Clique na imagem com o botão direito do mouse e escolha a opção "Salvar imagem como ..."
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-sucess" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIM MODAL -->
+
           <button class="btn" id="brush"> <img src="assets/icons/brush.svg" alt="brush"> </button>
           <button class="btn" id="erase"> <img src="assets/icons/erase.svg" alt="erase"> </button>
           <button class="btn" id="circle" value="circleFormat"> <img src="assets/icons/circle.svg" alt="circle"> </button>
